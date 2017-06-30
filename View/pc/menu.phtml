@@ -1,0 +1,43 @@
+<body class="home page page-id-9 page-template page-template-t-page-php">
+<?php include(VIEW_PATH.PLATFORM."/widgets/menu_mobile.phtml"); ?>
+<div id="wrapper">
+	<div id="header-bg"></div>
+<div class="container">
+<div class="row">
+<?php include(VIEW_PATH.PLATFORM."/widgets/sidebar.phtml"); ?>
+	<div id="main-content">
+		<div id="inner-content">
+				<h1 class="page-title"> <?=$page_params['menu_type']?> </h1>
+				<hr class="headings">
+				<div align="center">
+				<div class="slider-wrapper theme-default">
+					<div class="ribbon"></div>
+				</div>
+				<menu>
+					<?php
+					if (is_array($page_params['menu']) && $count = count($page_params['menu'])) {
+						$showCategories = true;
+						if (!($count > 1)) {
+							$showCategories = false;
+						}
+
+						foreach($page_params['menu'] as $category => $plates) {
+							echo !$showCategories ? "" : "<h4 style='color:darkblue;'>".$page_params['menu_categories'][$category]['title']."</h4>";
+							foreach($plates as $plate) {
+								?>
+								<menuTitle><?=$plate['name']?></menuTitle>
+								<menuPrice><?=number_format($plate['price'], 2)?>$</menuPrice>
+								<!-- <br/><br/> -->
+								<br/>
+								<?php
+							}
+						}
+					} else {
+						echo "There are no items in this mennu. <br/><br/> Please call the restaurant for the menu information.";
+					}
+					?>
+				</menu>
+				</div>
+
+		</div>
+</div>

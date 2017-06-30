@@ -1,0 +1,83 @@
+<body class="home page page-id-9 page-template page-template-t-page-php">
+<?php include(VIEW_PATH.PLATFORM."/widgets/menu_mobile.phtml"); ?>
+<div id="wrapper">
+  <div id="header-bg"></div>
+<div class="container">
+<div class="row">
+<?php include(VIEW_PATH.PLATFORM."/widgets/sidebar.phtml"); ?>
+  <div id="main-content">
+    <div id="inner-content">
+    <h1 class="page-title"> Contact </h1>
+        <hr class="headings">
+        <div align="center">
+        <div class="slider-wrapper theme-default">
+          <div class="ribbon"></div>
+        </div>
+<p>105 Rue Prince Arthur Est Montréal, QC H2X</p><hr/>
+<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5591.5955661258995!2d-73.57264567123357!3d45.514149189802104!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x14fa61b5b364be7!2sCaverne+Grecque+(La)!5e0!3m2!1sen!2sca!4v1412301319534" width="700" height="300" frameborder="0" style="border:0"></iframe>
+ <!-- FORM -->
+<hr/><br/>
+<p>Please feel free to contact us if you have any questions about our restaurant.</p>
+<div id="form-wrapper">
+<!-- our error container -->
+<div class="message">
+<h4>There are errors with your form:</h4>
+<ol>
+    <li><label for="formname" class="error">Please enter your full name</label></li>
+    <li><label for="formphone" class="error">Please enter your phone number</label></li>
+    <li><label for="formemail" class="error">Please enter your email address</label></li>
+</ol>
+</div>
+
+<?php
+  if ($page_params['message']) {
+    ?>
+    <p style="color:red"><?=$page_params['message']?></p>
+    <?php
+  }
+?>
+<form name="reservations" id="reso" action="<?=$page_params['site_url']?>contact/" method="post">
+ <div class="infoWrapper">
+  <div class="infoContent">
+
+    <input type="hidden" id="formname_default" value="Full Name" />
+    <input type="hidden" id="formphone_default" value="Phone" />
+
+   <input type="text" name="formname" id="formname" value="Full Name" onfocus="if(this.value=='Full Name')this.value='';" onblur="if(this.value=='')this.value='Full Name';" class="input-text full {validate:{required:true,minlength:3}}"  />
+
+  </div>
+ </div>
+
+
+ <div class="infoWrapper">
+    <div class="infoContent">
+      <input type="text" name="formphone" id="formphone" value="Phone" onfocus="if(this.value=='Phone')this.value='';" onblur="if(this.value=='')this.value='Phone';" class="input-text full {validate:{required:true,minlength:7}}"  />
+    </div>
+</div>
+
+ <div class="infoWrapper">
+  <div class="infoContent">
+   <input type="text" name="formemail" id="formemail" value="Email" onfocus="if(this.value=='Email')this.value='';" onblur="if(this.value=='')this.value='Email';" class="input-text full {validate:{required:true,email:true}}" />
+  </div>
+ </div>
+
+ <div class="infoWrapper">
+  <div class="infoContent">
+   <textarea name="formcomments" id="formcomments" onfocus="if(this.value=='Comments / notes')this.value='';" onblur="if(this.value=='')this.value='Comments / notes';" class="input-text full tall">Comments / notes</textarea>
+  </div>
+ </div>
+<p>If you want to hear back from us please provide contact information.</p>
+ <div class="infoWrapper">
+  <div class="infoTitle"></div>
+  <div class="infoContent">
+   <input type="submit" name="send" value="Send" class="sendbtn" />
+  </div>
+ </div>
+
+
+</form>
+</div>
+<!-- /FORM -->
+        </div>
+    </div>
+

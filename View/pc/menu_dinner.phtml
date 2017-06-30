@@ -1,0 +1,38 @@
+<body class="home page page-id-9 page-template page-template-t-page-php">
+<?php include(VIEW_PATH.PLATFORM."/widgets/menu_mobile.phtml"); ?>
+<div id="wrapper">
+	<div id="header-bg"></div>
+<div class="container">
+<div class="row">
+<?php include(VIEW_PATH.PLATFORM."/widgets/sidebar.phtml"); ?>
+	<div id="main-content">
+		<div id="inner-content-menu">
+				<h1 class="page-title"> Dinner </h1>
+				<hr class="headings">
+				<div align="center">
+				<div class="slider-wrapper theme-default">
+					<div class="ribbon"></div>
+				</div>
+				<menu>
+					<?php
+					if (is_array($page_params['menu']) && count($page_params['menu'])) {
+						foreach($page_params['menu'] as $category => $plates) {
+							echo "<h4 style='color:darkblue;'>".$page_params['menu_categories'][$category]['title']."</h4>";
+							foreach($plates as $plate) {
+								?>
+								<menuTitle><?=$plate['name']?></menuTitle>
+								<menuPrice><?=$plate['price']?>$</menuPrice>
+								<!-- <br/><br/> -->
+								<br/>
+								<?php
+							}
+						}
+					} else {
+						echo "There are no items in this mennu.";
+					}
+					?>
+				</menu>
+				</div>
+
+		</div>
+</div>

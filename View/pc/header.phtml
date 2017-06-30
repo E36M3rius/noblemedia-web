@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en-US"><head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<link href="<?=$page_params['static_url']?>css/style.css" rel="stylesheet" type="text/css" />
+<title>Restaurant La Caverne Grecque</title>
+<meta name="description" content="Greek Cuisine in the middle of Montreal."/>
+<link rel="canonical" href="#" />
+<link rel="alternate" type="application/rss+xml" title="Eatery &raquo; Feed" href="" />
+<link rel="alternate" type="application/rss+xml" title="Eatery &raquo; Comments Feed" href="" />
+<link rel="alternate" type="application/rss+xml" title="Eatery &raquo; Welcome to Eatery Comments Feed" href="" />
+<link rel='stylesheet' id='superfish-css-css'  href='<?=$page_params['static_url']?>css/superfish.css' type='text/css' media='all' />
+<link rel='stylesheet' id='imageCSS-css'  href='<?=$page_params['static_url']?>css/prettyPhoto.css' type='text/css' media='all' />
+<link rel='stylesheet' id='nivoDefault-css'  href='<?=$page_params['static_url']?>css/nivo/default/default.css' type='text/css' media='all' />
+<link rel='stylesheet' id='nivoSlider-css'  href='<?=$page_params['static_url']?>css/nivo-slider.css' type='text/css' media='all' />
+<!--[if lte IE 9]>
+<link rel='stylesheet' id='1140-ie-9-css'  href='css/ie.css' type='text/css' media='all' />
+<![endif]-->
+<!--[if lt IE 7]>
+<link rel='stylesheet' id='ie-7-css'  href='css/ie7.css' type='text/css' media='all' />
+<![endif]-->
+<link rel='stylesheet' id='1140-css-css'  href='<?=$page_params['static_url']?>css/1140.css' type='text/css' media='all' />
+<link rel='stylesheet' id='1140-responsive-css-css'  href='<?=$page_params['static_url']?>css/1140-responsive.css' type='text/css' media='all' />
+<script type='text/javascript' src='<?=$page_params['static_url']?>js/jquery/jquery.js'></script>
+<script type='text/javascript' src='<?=$page_params['static_url']?>js/jquery/jquery-migrate.min.js'></script>
+<script type='text/javascript' src='<?=$page_params['static_url']?>js/jqsf.js'></script>
+<script type='text/javascript' src='<?=$page_params['static_url']?>js/superfish.js'></script>
+<script type='text/javascript' src='<?=$page_params['static_url']?>js/window.load.js'></script>
+<link rel="alternate" type="application/rss+xml" href="" title="Eatery latest posts" />
+<link rel="alternate" type="application/rss+xml" href="" title="Eatery latest comments" />
+<link rel="shortcut icon" href="/images/logo.jpg">
+
+<!-- Responsive JS -->
+<!--[if lt IE 9]>
+<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+<![endif]-->
+<!-- END Responsive JS -->
+
+<!-- SKIN STYLE SHEET -->
+<link href="<?=$page_params['static_url']?>css/skins/black/style.css" rel="stylesheet" type="text/css" />
+
+<!-- THEME OPTION SETTINGS | CSS -->
+<style type="text/css">
+
+/* Social Media Icon  */
+.googleplus, .googlemaps, .linkedin, .meetup, .phone, .pinterest, .rss, .sharethis, .tripadvisor, .tumblr, .twitter, .urbanspoon, .vimeo, .yelp, .youtube, .bookmark, .email, .facebook, .foursquare, .instagram{
+		background-image: url(<?=$page_params['static_url']?>css/skins/black/images/sprites.png);}
+/* CUSTOM BG HEADER */
+#header-bg{
+	background-image:url(<?=$page_params['static_url']?>css/skins/black/images/header-bg.jpg);}
+
+/* Responsive CSS */
+@media only screen and (max-width: 1280px) {
+	#header-bg {
+		background:url(<?=$page_params['static_url']?>css/skins/black/images/header-bg-sm.jpg);
+		background-position:top center;
+		background-repeat:repeat-x;
+		}
+		#main-content {
+			margin-top:270px;
+		}
+}
+@media handheld, only screen and (max-width: 767px) {
+	#main-content{
+		margin: 0;
+	}
+}
+
+#header-bg{
+	visibility:hidden;
+	display:none;
+}
+.container, #main-content {
+	margin-top: 0;
+}
+body {
+	background-image:url(<?=$page_params['static_url']?>images/bg3.jpg) !important;
+	background-repeat:no-repeat  !important;
+	background-attachment:fixed  !important;
+	-webkit-background-size: cover  !important;
+	-moz-background-size: cover  !important;
+	-o-background-size: cover  !important;
+	background-size: cover  !important;
+
+}
+.corner {background:none;}
+
+
+</style>
+<link href="<?=$page_params['static_url']?>css/social_media.css" rel="stylesheet" type="text/css" />
+<script src="<?=$page_params['static_url']?>js/jquery.cookie.js"></script>
+
+<script>
+// DEMO CODE REMOVE BEFORE GOING LIVE
+jQuery(document).ready(function(){
+  // Color Select Option Change CSS
+
+			jQuery(".themecolor").click(function () {
+
+				// GET skin / color from REL tag
+				var color_data = jQuery(this).find("a").text().toLowerCase();;
+				//console.log(color_data);
+
+				// COOKIE METHOD | SET COOKIE
+				jQuery.cookie('switch_color', color_data, { path: '/' });
+
+				var themecolor_cookie = jQuery.cookie("switch_color");
+				//console.log('Cookie Set: '+color_data);
+				location.reload();
+
+        	});
+ });
+ // END DEMO CODE REMOVE BEFORE GOING LIVE
+</script>
+<link rel="alternate stylesheet" type="text/css" href="<?=$page_params['static_url']?>css/skins/black/style.css" title="black"  />
+<!--END LIVE DEMO ONLY-->
+<!-- Custom Google H1 Font -->
+<link href='http://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet' type='text/css' />
+<style type="text/css">h1, h2, h3, h4, h5, #sidebar-menu li a {font-family: 'Droid Serif', Georgia,Times,serif;} </style>
+<!-- Custom CSS -->
+<style type="text/css">
+.mob-sub{display:none !important;}
+
+.page-id-860 .currency_symbol{display:none}
+
+body.home a.flatbutton {padding: 10px 20px}
+
+#gmap img {max-width: none;}
+
+#footer p a {font-weight:normal !important;}
+
+
+</style>
+<!-- End Custom CSS -->
+<!-- Google Analytics -->
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', '']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<!-- End Google Analytics -->
+
+</head>

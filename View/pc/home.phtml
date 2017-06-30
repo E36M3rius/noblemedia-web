@@ -1,0 +1,35 @@
+<body class="home page page-id-9 page-template page-template-t-page-php">
+<?php include(VIEW_PATH.PLATFORM."/widgets/menu_mobile.phtml"); ?>
+<div id="wrapper">
+	<div id="header-bg"></div>
+<div class="container">
+<div class="row">
+<?php include(VIEW_PATH.PLATFORM."/widgets/sidebar.phtml"); ?>
+	<div id="main-content">
+		<div id="inner-content">
+				<h1 class="page-title">Noble Media</h1>
+				<hr class="headings">
+				<div align="center">
+				<script type='text/javascript' src='<?=$page_params['static_url']?>js/nivo-slider/jquery.nivo.slider.js'></script>
+<div class="slider-wrapper theme-default">
+					<div class="ribbon"></div>
+					<?php if (isset($page_params['slider_images']) && count($page_params['slider_images'])) {
+						?> <div id="slider" class="nivoSlider"  > <?php
+						foreach ($page_params['slider_images'] as $imageName) {
+							?> <img src='<?=$page_params['static_url']?>images/album/<?=$imageName?>.jpg' width='656px'  alt='' title='' data-transition='fade' /> <?php
+						}
+						?> </div> <?php
+					}?>
+</div>
+				</div>
+				<h5 style="margin-bottom: 20px; text-align: center;">La Caverne Grecque is a famous name in restaurants specializing in traditional Greek cuisine.</h5>
+
+				<script type='text/javascript' src='<?=$page_params['static_url']?>js/prettyphoto/jquery.prettyPhoto.js'></script>
+<script type='text/javascript' src='<?=$page_params['static_url']?>js/prettyphoto/jquery.prettyPhoto.settings.js'></script>
+<div class="ruler"  style="padding-top:10px;margin-bottom:30px;margin-left:0px;margin-right:0px"></div>
+
+
+
+	<br class="clear" />
+	</div>
+</div>
